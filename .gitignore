@@ -5,3 +5,7 @@
 /finetune_data_merged.json
 /finetune_data_synthetic.json
 /finetune_data.json
+/checkpoints/
+/chroma_db/
+/demo_videos/
+/__pycache__/
