@@ -273,10 +273,10 @@ async def analyze_video(
 
         # ── Step 3: VLM first analysis ─────────────────────────────────────────
         input_text = (
-            f"Coastal surveillance camera footage. [{location} / {time_of_day}]\n"
-            f"Weather: temp {temperature}°C, wind dir {wind_dir}°, "
-            f"wind speed {wind_speed}m/s, rainfall {rainfall}mm, humidity {humidity}%\n\n"
-            f"Analyze the situation in the video frames and write a response report."
+            f"해안 감시 카메라 영상입니다. [{location} / {time_of_day}]\n"
+            f"기상정보: 기온 {temperature}°C, 풍향 {wind_dir}°, "
+            f"풍속 {wind_speed}m/s, 강수량 {rainfall}mm, 습도 {humidity}%\n\n"
+            f"다음 형식으로 상황을 분석하고 대응 리포트를 작성하세요."
         )
 
         first_analysis = vlm_analyze(frame_paths, input_text)
@@ -316,12 +316,12 @@ async def analyze_video(
 
         # ── Step 5: VLM final analysis (with RAG context) ─────────────────────
         final_prompt = (
-            f"Coastal surveillance camera footage. [{location} / {time_of_day}]\n"
-            f"Weather: temp {temperature}°C, wind dir {wind_dir}°, "
-            f"wind speed {wind_speed}m/s, rainfall {rainfall}mm, humidity {humidity}%\n\n"
-            f"[First Analysis]\n{first_analysis}\n\n"
-            f"[Similar Past Cases]\n{case_texts}\n\n"
-            f"Using the first analysis and similar past cases, write the final response report."
+            f"해안 감시 카메라 영상입니다. [{location} / {time_of_day}]\n"
+            f"기상정보: 기온 {temperature}°C, 풍향 {wind_dir}°, "
+            f"풍속 {wind_speed}m/s, 강수량 {rainfall}mm, 습도 {humidity}%\n\n"
+            f"[1차 분석 결과]\n{first_analysis}\n\n"
+            f"[유사 과거 사례]\n{case_texts}\n\n"
+            f"1차 분석 결과와 유사 과거 사례를 참고하여 최종 대응 리포트를 작성하세요."
         )
 
         final_report = vlm_analyze(frame_paths, final_prompt)
@@ -330,12 +330,19 @@ async def analyze_video(
         # ── Step 5: Send Telegram alert with the most anomalous frame ──────────
         # Pick the frame with the highest difference score as the emergency image
         alert_frame = _pick_alert_frame(frame_paths)
-        telegram_send_alert(
-            location    = f"{location} / {time_of_day}",
-            object_type = object_type,
-            report      = final_report,
-            frame_path  = alert_frame,
-        )
+        try:
+            telegram_send_alert(
+                alert_level = final_level,
+                report      = final_report,
+                image_path  = alert_frame,
+                location    = f"{location} / {time_of_day}",
+                weather     = {
+                    "wind_speed":  wind_speed,
+                    "time_of_day": time_of_day,
+                },
+            )
+        except Exception as tg_err:
+            print(f"[Telegram] 전송 실패 (파이프라인은 계속): {tg_err}")
 
         return JSONResponse({
             "status":          "anomaly_detected",
@@ -385,10 +392,10 @@ async def analyze(
 
     try:
         input_text = (
-            f"Coastal surveillance camera image. [{location} / {time_of_day}]\n"
-            f"Weather: temp {temperature}°C, wind dir {wind_dir}°, "
-            f"wind speed {wind_speed}m/s, rainfall {rainfall}mm, humidity {humidity}%\n\n"
-            f"Analyze the situation and write a response report."
+            f"해안 감시 카메라 이미지입니다. [{location} / {time_of_day}]\n"
+            f"기상정보: 기온 {temperature}°C, 풍향 {wind_dir}°, "
+            f"풍속 {wind_speed}m/s, 강수량 {rainfall}mm, 습도 {humidity}%\n\n"
+            f"다음 형식으로 상황을 분석하고 대응 리포트를 작성하세요."
         )
 
         first_analysis = vlm_analyze([tmp_path], input_text)
@@ -409,12 +416,12 @@ async def analyze(
         ])
 
         final_prompt = (
-            f"Coastal surveillance camera image. [{location} / {time_of_day}]\n"
-            f"Weather: temp {temperature}°C, wind dir {wind_dir}°, "
-            f"wind speed {wind_speed}m/s, rainfall {rainfall}mm, humidity {humidity}%\n\n"
-            f"[First Analysis]\n{first_analysis}\n\n"
-            f"[Similar Past Cases]\n{case_texts}\n\n"
-            f"Write the final response report."
+            f"해안 감시 카메라 이미지입니다. [{location} / {time_of_day}]\n"
+            f"기상정보: 기온 {temperature}°C, 풍향 {wind_dir}°, "
+            f"풍속 {wind_speed}m/s, 강수량 {rainfall}mm, 습도 {humidity}%\n\n"
+            f"[1차 분석 결과]\n{first_analysis}\n\n"
+            f"[유사 과거 사례]\n{case_texts}\n\n"
+            f"1차 분석 결과와 유사 과거 사례를 참고하여 최종 대응 리포트를 작성하세요."
         )
 
         final_report  = vlm_analyze([tmp_path], final_prompt)

@@ -9,3 +9,5 @@
 /chroma_db/
 /demo_videos/
 /__pycache__/
+/.claude/
+/.gradio/

@@ -311,10 +311,24 @@ with gr.Blocks(
     gr.Markdown("### 📁 Demo Videos")
     gr.Examples(
         examples=[
-            ["/home/hail/pan/VLM-project/demo_videos/demo_I1_scene0001.mp4",
+            ["/home/hail/pan/VLM-project/demo_videos/green_01_어선_주간_기상양호.mp4",
+             "연평도", "주간", 24.0, 180.0, 3.0, 0.0, 60],
+            ["/home/hail/pan/VLM-project/demo_videos/green_02_어선_주간_기상양호.mp4",
+             "연평도", "주간", 22.0, 200.0, 4.0, 0.0, 55],
+            ["/home/hail/pan/VLM-project/demo_videos/green_03_상선_주간_기상양호.mp4",
+             "백령도", "주간", 20.0, 160.0, 5.0, 0.0, 65],
+            ["/home/hail/pan/VLM-project/demo_videos/yellow_01_군함_주간.mp4",
+             "연평도", "주간", 18.0, 270.0, 8.0, 0.0, 70],
+            ["/home/hail/pan/VLM-project/demo_videos/yellow_02_군함_주간_바람강함.mp4",
+             "백령도", "주간", 16.0, 290.0, 14.0, 2.0, 75],
+            ["/home/hail/pan/VLM-project/demo_videos/yellow_03_군함_야간.mp4",
+             "연평도", "야간", 14.0, 260.0, 10.0, 1.0, 80],
+            ["/home/hail/pan/VLM-project/demo_videos/red_01_드론_주간_합성.mp4",
              "연평도", "주간", 28.0, 180.0, 2.0, 0.0, 60],
-            ["/home/hail/pan/VLM-project/demo_videos/demo_I1_scene0002.mp4",
-             "연평도", "야간", 15.0, 270.0, 15.0, 5.0, 80],
+            ["/home/hail/pan/VLM-project/demo_videos/red_02_군함_야간_풍랑.mp4",
+             "백령도", "야간", 12.0, 310.0, 18.0, 8.0, 85],
+            ["/home/hail/pan/VLM-project/demo_videos/red_03_드론_주간_합성2.mp4",
+             "연평도", "주간", 26.0, 190.0, 3.0, 0.0, 62],
         ],
         inputs=[
             video_input, location, time_of_day,
