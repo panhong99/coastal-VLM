@@ -11,3 +11,6 @@
 /__pycache__/
 /.claude/
 /.gradio/
+/dataset.zip
+/.env.example
+/Dockerfile

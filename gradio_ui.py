@@ -1,9 +1,11 @@
 # gradio_ui.py
+import os
 import gradio as gr
 import requests
 from datetime import datetime
 
-API_URL = "http://localhost:8000/analyze_video"
+API_URL   = os.environ.get("API_URL", "http://localhost:8000/analyze_video")
+DEMO_DIR  = os.environ.get("DEMO_VIDEOS_DIR", "/app/demo_videos")
 
 # Pipeline step labels shown in the UI
 PIPELINE_STEPS = [
@@ -118,7 +120,7 @@ def analyze_video(
             info = (
                 f"**Anomaly score:** {result['anomaly_score']}  \n"
                 f"**Frames analyzed:** {result['frames_analyzed']}  \n"
-                f"**Threshold:** 15.0"
+                f"**Threshold:** 5.0"
             )
             return step_html, banner, info, ""
 
@@ -311,24 +313,15 @@ with gr.Blocks(
     gr.Markdown("### 📁 Demo Videos")
     gr.Examples(
         examples=[
-            ["/home/hail/pan/VLM-project/demo_videos/green_01_어선_주간_기상양호.mp4",
-             "연평도", "주간", 24.0, 180.0, 3.0, 0.0, 60],
-            ["/home/hail/pan/VLM-project/demo_videos/green_02_어선_주간_기상양호.mp4",
-             "연평도", "주간", 22.0, 200.0, 4.0, 0.0, 55],
-            ["/home/hail/pan/VLM-project/demo_videos/green_03_상선_주간_기상양호.mp4",
-             "백령도", "주간", 20.0, 160.0, 5.0, 0.0, 65],
-            ["/home/hail/pan/VLM-project/demo_videos/yellow_01_군함_주간.mp4",
-             "연평도", "주간", 18.0, 270.0, 8.0, 0.0, 70],
-            ["/home/hail/pan/VLM-project/demo_videos/yellow_02_군함_주간_바람강함.mp4",
-             "백령도", "주간", 16.0, 290.0, 14.0, 2.0, 75],
-            ["/home/hail/pan/VLM-project/demo_videos/yellow_03_군함_야간.mp4",
-             "연평도", "야간", 14.0, 260.0, 10.0, 1.0, 80],
-            ["/home/hail/pan/VLM-project/demo_videos/red_01_드론_주간_합성.mp4",
-             "연평도", "주간", 28.0, 180.0, 2.0, 0.0, 60],
-            ["/home/hail/pan/VLM-project/demo_videos/red_02_군함_야간_풍랑.mp4",
-             "백령도", "야간", 12.0, 310.0, 18.0, 8.0, 85],
-            ["/home/hail/pan/VLM-project/demo_videos/red_03_드론_주간_합성2.mp4",
-             "연평도", "주간", 26.0, 190.0, 3.0, 0.0, 62],
+            [f"{DEMO_DIR}/green_01_어선_주간_기상양호.mp4",  "연평도", "주간", 24.0, 180.0,  3.0, 0.0, 60],
+            [f"{DEMO_DIR}/green_02_어선_주간_기상양호.mp4",  "연평도", "주간", 22.0, 200.0,  4.0, 0.0, 55],
+            [f"{DEMO_DIR}/green_03_상선_주간_기상양호.mp4",  "백령도", "주간", 20.0, 160.0,  5.0, 0.0, 65],
+            [f"{DEMO_DIR}/yellow_01_군함_주간.mp4",          "연평도", "주간", 18.0, 270.0,  8.0, 0.0, 70],
+            [f"{DEMO_DIR}/yellow_02_군함_주간_바람강함.mp4", "백령도", "주간", 16.0, 290.0, 14.0, 2.0, 75],
+            [f"{DEMO_DIR}/yellow_03_군함_야간.mp4",          "연평도", "야간", 14.0, 260.0, 10.0, 1.0, 80],
+            [f"{DEMO_DIR}/red_01_드론_주간_합성.mp4",        "연평도", "주간", 28.0, 180.0,  2.0, 0.0, 60],
+            [f"{DEMO_DIR}/red_02_군함_야간_풍랑.mp4",        "백령도", "야간", 12.0, 310.0, 18.0, 8.0, 85],
+            [f"{DEMO_DIR}/red_03_드론_주간_합성2.mp4",       "연평도", "주간", 26.0, 190.0,  3.0, 0.0, 62],
         ],
         inputs=[
             video_input, location, time_of_day,
