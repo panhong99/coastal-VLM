@@ -1,0 +1,452 @@
+[
+  {
+    "images": [
+      "EO_SU_NT_W6_H7_E2_0025.jpg",
+      "EO_SU_NT_W6_H7_E2_0026.jpg",
+      "EO_SU_NT_W6_H7_E2_0027.jpg",
+      "EO_SU_NT_W6_H7_E2_0028.jpg",
+      "EO_SU_NT_W6_H7_E2_0025.jpg",
+      "EO_SU_NT_W6_H7_E2_0026.jpg",
+      "EO_SU_NT_W6_H7_E2_0027.jpg",
+      "EO_SU_NT_W6_H7_E2_0028.jpg"
+    ],
+    "gt_level": "YELLOW",
+    "pred_level": "YELLOW",
+    "correct": true
+  },
+  {
+    "images": [
+      "EO_WI_DT_W2_H7_B5B4_0025.jpg",
+      "EO_WI_DT_W2_H7_B5B4_0026.jpg",
+      "EO_WI_DT_W2_H7_B5B4_0027.jpg",
+      "EO_WI_DT_W2_H7_B5B4_0028.jpg",
+      "EO_WI_DT_W2_H7_B5B4_0025.jpg",
+      "EO_WI_DT_W2_H7_B5B4_0026.jpg",
+      "EO_WI_DT_W2_H7_B5B4_0027.jpg",
+      "EO_WI_DT_W2_H7_B5B4_0028.jpg"
+    ],
+    "gt_level": "RED",
+    "pred_level": "RED",
+    "correct": true
+  },
+  {
+    "images": [
+      "IR_SU_NT_W5_H2_A3E3_0005.jpg",
+      "IR_SU_NT_W5_H2_A3E3_0006.jpg",
+      "IR_SU_NT_W5_H2_A3E3_0007.jpg",
+      "IR_SU_NT_W5_H2_A3E3_0008.jpg",
+      "IR_SU_NT_W5_H2_A3E3_0005.jpg",
+      "IR_SU_NT_W5_H2_A3E3_0006.jpg",
+      "IR_SU_NT_W5_H2_A3E3_0007.jpg",
+      "IR_SU_NT_W5_H2_A3E3_0008.jpg"
+    ],
+    "gt_level": "GREEN",
+    "pred_level": "YELLOW",
+    "correct": false
+  },
+  {
+    "images": [
+      "IR_SU_NT_W7_H2_A1A5_0006.jpg",
+      "IR_SU_NT_W7_H2_A1A5_0007.jpg",
+      "IR_SU_NT_W7_H2_A1A5_0008.jpg",
+      "IR_SU_NT_W7_H2_A1A5_0006.jpg",
+      "IR_SU_NT_W7_H2_A1A5_0007.jpg",
+      "IR_SU_NT_W7_H2_A1A5_0008.jpg",
+      "IR_SU_NT_W7_H2_A1A5_0006.jpg",
+      "IR_SU_NT_W7_H2_A1A5_0007.jpg"
+    ],
+    "gt_level": "GREEN",
+    "pred_level": "YELLOW",
+    "correct": false
+  },
+  {
+    "images": [
+      "EO_SU_NT_W1_H4_E1B1C5_0013.jpg",
+      "EO_SU_NT_W1_H4_E1B1C5_0014.jpg",
+      "EO_SU_NT_W1_H4_E1B1C5_0015.jpg",
+      "EO_SU_NT_W1_H4_E1B1C5_0016.jpg",
+      "EO_SU_NT_W1_H4_E1B1C5_0013.jpg",
+      "EO_SU_NT_W1_H4_E1B1C5_0014.jpg",
+      "EO_SU_NT_W1_H4_E1B1C5_0015.jpg",
+      "EO_SU_NT_W1_H4_E1B1C5_0016.jpg"
+    ],
+    "gt_level": "YELLOW",
+    "pred_level": "YELLOW",
+    "correct": true
+  },
+  {
+    "images": [
+      "IR_SU_NT_W1_H3_E5A5B5_0009.jpg",
+      "IR_SU_NT_W1_H3_E5A5B5_0010.jpg",
+      "IR_SU_NT_W1_H3_E5A5B5_0011.jpg",
+      "IR_SU_NT_W1_H3_E5A5B5_0012.jpg",
+      "IR_SU_NT_W1_H3_E5A5B5_0009.jpg",
+      "IR_SU_NT_W1_H3_E5A5B5_0010.jpg",
+      "IR_SU_NT_W1_H3_E5A5B5_0011.jpg",
+      "IR_SU_NT_W1_H3_E5A5B5_0012.jpg"
+    ],
+    "gt_level": "RED",
+    "pred_level": "RED",
+    "correct": true
+  },
+  {
+    "images": [
+      "I2_S0_C5_0117001.jpg",
+      "I2_S0_C5_0117001.jpg",
+      "I2_S0_C5_0117001.jpg",
+      "I2_S0_C5_0117001.jpg",
+      "I2_S0_C5_0117001.jpg",
+      "I2_S0_C5_0117001.jpg",
+      "I2_S0_C5_0117001.jpg",
+      "I2_S0_C5_0117002.jpg"
+    ],
+    "gt_level": "YELLOW",
+    "pred_level": "YELLOW",
+    "correct": true
+  },
+  {
+    "images": [
+      "EO_SU_DT_W6_H2_D2D1D5_0006.jpg",
+      "EO_SU_DT_W6_H2_D2D1D5_0007.jpg",
+      "EO_SU_DT_W6_H2_D2D1D5_0006.jpg",
+      "EO_SU_DT_W6_H2_D2D1D5_0007.jpg",
+      "EO_SU_DT_W6_H2_D2D1D5_0006.jpg",
+      "EO_SU_DT_W6_H2_D2D1D5_0007.jpg",
+      "EO_SU_DT_W6_H2_D2D1D5_0006.jpg",
+      "EO_SU_DT_W6_H2_D2D1D5_0007.jpg"
+    ],
+    "gt_level": "GREEN",
+    "pred_level": "GREEN",
+    "correct": true
+  },
+  {
+    "images": [
+      "EO_WI_DT_W4_H4_B2_0013.jpg",
+      "EO_WI_DT_W4_H4_B2_0014.jpg",
+      "EO_WI_DT_W4_H4_B2_0015.jpg",
+      "EO_WI_DT_W4_H4_B2_0013.jpg",
+      "EO_WI_DT_W4_H4_B2_0014.jpg",
+      "EO_WI_DT_W4_H4_B2_0015.jpg",
+      "EO_WI_DT_W4_H4_B2_0013.jpg",
+      "EO_WI_DT_W4_H4_B2_0014.jpg"
+    ],
+    "gt_level": "RED",
+    "pred_level": "RED",
+    "correct": true
+  },
+  {
+    "images": [
+      "EO_WI_DT_W4_H5_B5E5_0017.jpg",
+      "EO_WI_DT_W4_H5_B5E5_0018.jpg",
+      "EO_WI_DT_W4_H5_B5E5_0019.jpg",
+      "EO_WI_DT_W4_H5_B5E5_0020.jpg",
+      "EO_WI_DT_W4_H5_B5E5_0017.jpg",
+      "EO_WI_DT_W4_H5_B5E5_0018.jpg",
+      "EO_WI_DT_W4_H5_B5E5_0019.jpg",
+      "EO_WI_DT_W4_H5_B5E5_0020.jpg"
+    ],
+    "gt_level": "RED",
+    "pred_level": "RED",
+    "correct": true
+  },
+  {
+    "images": [
+      "EO_SU_DT_W7_H4_D2A2B4_0013.jpg",
+      "EO_SU_DT_W7_H4_D2A2B4_0015.jpg",
+      "EO_SU_DT_W7_H4_D2A2B4_0016.jpg",
+      "EO_SU_DT_W7_H4_D2A2B4_0013.jpg",
+      "EO_SU_DT_W7_H4_D2A2B4_0015.jpg",
+      "EO_SU_DT_W7_H4_D2A2B4_0016.jpg",
+      "EO_SU_DT_W7_H4_D2A2B4_0013.jpg",
+      "EO_SU_DT_W7_H4_D2A2B4_0015.jpg"
+    ],
+    "gt_level": "GREEN",
+    "pred_level": "YELLOW",
+    "correct": false
+  },
+  {
+    "images": [
+      "EO_SU_NT_W2_H3_B2D2_0010.jpg",
+      "EO_SU_NT_W2_H3_B2D2_0010.jpg",
+      "EO_SU_NT_W2_H3_B2D2_0010.jpg",
+      "EO_SU_NT_W2_H3_B2D2_0010.jpg",
+      "EO_SU_NT_W2_H3_B2D2_0010.jpg",
+      "EO_SU_NT_W2_H3_B2D2_0010.jpg",
+      "EO_SU_NT_W2_H3_B2D2_0010.jpg",
+      "EO_SU_NT_W2_H3_B2D2_0010.jpg"
+    ],
+    "gt_level": "RED",
+    "pred_level": "YELLOW",
+    "correct": false
+  },
+  {
+    "images": [
+      "EO_WI_DT_W3_H2_E3C3_0005.jpg",
+      "EO_WI_DT_W3_H2_E3C3_0007.jpg",
+      "EO_WI_DT_W3_H2_E3C3_0005.jpg",
+      "EO_WI_DT_W3_H2_E3C3_0007.jpg",
+      "EO_WI_DT_W3_H2_E3C3_0005.jpg",
+      "EO_WI_DT_W3_H2_E3C3_0007.jpg",
+      "EO_WI_DT_W3_H2_E3C3_0005.jpg",
+      "EO_WI_DT_W3_H2_E3C3_0007.jpg"
+    ],
+    "gt_level": "YELLOW",
+    "pred_level": "YELLOW",
+    "correct": true
+  },
+  {
+    "images": [
+      "EO_SU_NT_W2_H7_B1D1E5_0025.jpg",
+      "EO_SU_NT_W2_H7_B1D1E5_0026.jpg",
+      "EO_SU_NT_W2_H7_B1D1E5_0027.jpg",
+      "EO_SU_NT_W2_H7_B1D1E5_0028.jpg",
+      "EO_SU_NT_W2_H7_B1D1E5_0025.jpg",
+      "EO_SU_NT_W2_H7_B1D1E5_0026.jpg",
+      "EO_SU_NT_W2_H7_B1D1E5_0027.jpg",
+      "EO_SU_NT_W2_H7_B1D1E5_0028.jpg"
+    ],
+    "gt_level": "RED",
+    "pred_level": "RED",
+    "correct": true
+  },
+  {
+    "images": [
+      "EO_WI_DT_W7_H4_D2E2A2_0014.jpg",
+      "EO_WI_DT_W7_H4_D2E2A2_0015.jpg",
+      "EO_WI_DT_W7_H4_D2E2A2_0016.jpg",
+      "EO_WI_DT_W7_H4_D2E2A2_0014.jpg",
+      "EO_WI_DT_W7_H4_D2E2A2_0015.jpg",
+      "EO_WI_DT_W7_H4_D2E2A2_0016.jpg",
+      "EO_WI_DT_W7_H4_D2E2A2_0014.jpg",
+      "EO_WI_DT_W7_H4_D2E2A2_0015.jpg"
+    ],
+    "gt_level": "GREEN",
+    "pred_level": "GREEN",
+    "correct": true
+  },
+  {
+    "images": [
+      "EO_WI_DT_W4_H3_B5D5E1_0009.jpg",
+      "EO_WI_DT_W4_H3_B5D5E1_0010.jpg",
+      "EO_WI_DT_W4_H3_B5D5E1_0011.jpg",
+      "EO_WI_DT_W4_H3_B5D5E1_0012.jpg",
+      "EO_WI_DT_W4_H3_B5D5E1_0009.jpg",
+      "EO_WI_DT_W4_H3_B5D5E1_0010.jpg",
+      "EO_WI_DT_W4_H3_B5D5E1_0011.jpg",
+      "EO_WI_DT_W4_H3_B5D5E1_0012.jpg"
+    ],
+    "gt_level": "RED",
+    "pred_level": "RED",
+    "correct": true
+  },
+  {
+    "images": [
+      "IR_SU_NT_W7_H1_C4E4_0002.jpg",
+      "IR_SU_NT_W7_H1_C4E4_0003.jpg",
+      "IR_SU_NT_W7_H1_C4E4_0004.jpg",
+      "IR_SU_NT_W7_H1_C4E4_0002.jpg",
+      "IR_SU_NT_W7_H1_C4E4_0003.jpg",
+      "IR_SU_NT_W7_H1_C4E4_0004.jpg",
+      "IR_SU_NT_W7_H1_C4E4_0002.jpg",
+      "IR_SU_NT_W7_H1_C4E4_0003.jpg"
+    ],
+    "gt_level": "GREEN",
+    "pred_level": "YELLOW",
+    "correct": false
+  },
+  {
+    "images": [
+      "IR_SU_NT_W1_H3_B5_0009.jpg",
+      "IR_SU_NT_W1_H3_B5_0010.jpg",
+      "IR_SU_NT_W1_H3_B5_0011.jpg",
+      "IR_SU_NT_W1_H3_B5_0009.jpg",
+      "IR_SU_NT_W1_H3_B5_0010.jpg",
+      "IR_SU_NT_W1_H3_B5_0011.jpg",
+      "IR_SU_NT_W1_H3_B5_0009.jpg",
+      "IR_SU_NT_W1_H3_B5_0010.jpg"
+    ],
+    "gt_level": "RED",
+    "pred_level": "RED",
+    "correct": true
+  },
+  {
+    "images": [
+      "I1_S0_C5_0053071.jpg",
+      "I1_S0_C5_0053072.jpg",
+      "I1_S0_C5_0053073.jpg",
+      "I1_S0_C5_0053074.jpg",
+      "I1_S0_C5_0053075.jpg",
+      "I1_S0_C5_0053076.jpg",
+      "I1_S0_C5_0053078.jpg",
+      "I1_S0_C5_0053079.jpg"
+    ],
+    "gt_level": "GREEN",
+    "pred_level": "GREEN",
+    "correct": true
+  },
+  {
+    "images": [
+      "EO_SU_NT_W5_H5_C2C1C5_0017.jpg",
+      "EO_SU_NT_W5_H5_C2C1C5_0018.jpg",
+      "EO_SU_NT_W5_H5_C2C1C5_0019.jpg",
+      "EO_SU_NT_W5_H5_C2C1C5_0020.jpg",
+      "EO_SU_NT_W5_H5_C2C1C5_0017.jpg",
+      "EO_SU_NT_W5_H5_C2C1C5_0018.jpg",
+      "EO_SU_NT_W5_H5_C2C1C5_0019.jpg",
+      "EO_SU_NT_W5_H5_C2C1C5_0020.jpg"
+    ],
+    "gt_level": "YELLOW",
+    "pred_level": "YELLOW",
+    "correct": true
+  },
+  {
+    "images": [
+      "EO_SU_NT_W1_H4_C5B5_0013.jpg",
+      "EO_SU_NT_W1_H4_C5B5_0015.jpg",
+      "EO_SU_NT_W1_H4_C5B5_0016.jpg",
+      "EO_SU_NT_W1_H4_C5B5_0013.jpg",
+      "EO_SU_NT_W1_H4_C5B5_0015.jpg",
+      "EO_SU_NT_W1_H4_C5B5_0016.jpg",
+      "EO_SU_NT_W1_H4_C5B5_0013.jpg",
+      "EO_SU_NT_W1_H4_C5B5_0015.jpg"
+    ],
+    "gt_level": "YELLOW",
+    "pred_level": "YELLOW",
+    "correct": true
+  },
+  {
+    "images": [
+      "I2_S0_C5_0163006.jpg",
+      "I2_S0_C5_0163007.jpg",
+      "I2_S0_C5_0163008.jpg",
+      "I2_S0_C5_0163009.jpg",
+      "I2_S0_C5_0163010.jpg",
+      "I2_S0_C5_0163012.jpg",
+      "I2_S0_C5_0163013.jpg",
+      "I2_S0_C5_0163014.jpg"
+    ],
+    "gt_level": "YELLOW",
+    "pred_level": "YELLOW",
+    "correct": true
+  },
+  {
+    "images": [
+      "EO_SU_NT_W5_H6_B4D4_0022.jpg",
+      "EO_SU_NT_W5_H6_B4D4_0023.jpg",
+      "EO_SU_NT_W5_H6_B4D4_0024.jpg",
+      "EO_SU_NT_W5_H6_B4D4_0022.jpg",
+      "EO_SU_NT_W5_H6_B4D4_0023.jpg",
+      "EO_SU_NT_W5_H6_B4D4_0024.jpg",
+      "EO_SU_NT_W5_H6_B4D4_0022.jpg",
+      "EO_SU_NT_W5_H6_B4D4_0023.jpg"
+    ],
+    "gt_level": "RED",
+    "pred_level": "RED",
+    "correct": true
+  },
+  {
+    "images": [
+      "I1_S0_C5_0141062.jpg",
+      "I1_S0_C5_0141064.jpg",
+      "I1_S0_C5_0141065.jpg",
+      "I1_S0_C5_0141067.jpg",
+      "I1_S0_C5_0141069.jpg",
+      "I1_S0_C5_0141070.jpg",
+      "I1_S0_C5_0141071.jpg",
+      "I1_S0_C5_0141072.jpg"
+    ],
+    "gt_level": "GREEN",
+    "pred_level": "GREEN",
+    "correct": true
+  },
+  {
+    "images": [
+      "EO_SU_DT_W5_H5_D4C4_0017.jpg",
+      "EO_SU_DT_W5_H5_D4C4_0019.jpg",
+      "EO_SU_DT_W5_H5_D4C4_0020.jpg",
+      "EO_SU_DT_W5_H5_D4C4_0017.jpg",
+      "EO_SU_DT_W5_H5_D4C4_0019.jpg",
+      "EO_SU_DT_W5_H5_D4C4_0020.jpg",
+      "EO_SU_DT_W5_H5_D4C4_0017.jpg",
+      "EO_SU_DT_W5_H5_D4C4_0019.jpg"
+    ],
+    "gt_level": "YELLOW",
+    "pred_level": "YELLOW",
+    "correct": true
+  },
+  {
+    "images": [
+      "EO_SU_NT_W1_H1_D2E2A2_0001.jpg",
+      "EO_SU_NT_W1_H1_D2E2A2_0002.jpg",
+      "EO_SU_NT_W1_H1_D2E2A2_0001.jpg",
+      "EO_SU_NT_W1_H1_D2E2A2_0002.jpg",
+      "EO_SU_NT_W1_H1_D2E2A2_0001.jpg",
+      "EO_SU_NT_W1_H1_D2E2A2_0002.jpg",
+      "EO_SU_NT_W1_H1_D2E2A2_0001.jpg",
+      "EO_SU_NT_W1_H1_D2E2A2_0002.jpg"
+    ],
+    "gt_level": "GREEN",
+    "pred_level": "GREEN",
+    "correct": true
+  },
+  {
+    "images": [
+      "EO_SU_NT_W1_H4_B2B1_0013.jpg",
+      "EO_SU_NT_W1_H4_B2B1_0014.jpg",
+      "EO_SU_NT_W1_H4_B2B1_0015.jpg",
+      "EO_SU_NT_W1_H4_B2B1_0013.jpg",
+      "EO_SU_NT_W1_H4_B2B1_0014.jpg",
+      "EO_SU_NT_W1_H4_B2B1_0015.jpg",
+      "EO_SU_NT_W1_H4_B2B1_0013.jpg",
+      "EO_SU_NT_W1_H4_B2B1_0014.jpg"
+    ],
+    "gt_level": "RED",
+    "pred_level": "RED",
+    "correct": true
+  },
+  {
+    "images": [
+      "EO_WI_DT_W1_H4_B5B4B3_0013.jpg",
+      "EO_WI_DT_W1_H4_B5B4B3_0014.jpg",
+      "EO_WI_DT_W1_H4_B5B4B3_0016.jpg",
+      "EO_WI_DT_W1_H4_B5B4B3_0013.jpg",
+      "EO_WI_DT_W1_H4_B5B4B3_0014.jpg",
+      "EO_WI_DT_W1_H4_B5B4B3_0016.jpg",
+      "EO_WI_DT_W1_H4_B5B4B3_0013.jpg",
+      "EO_WI_DT_W1_H4_B5B4B3_0014.jpg"
+    ],
+    "gt_level": "YELLOW",
+    "pred_level": "YELLOW",
+    "correct": true
+  },
+  {
+    "images": [
+      "EO_SU_DT_W6_H7_E1D1_0025.jpg",
+      "EO_SU_DT_W6_H7_E1D1_0027.jpg",
+      "EO_SU_DT_W6_H7_E1D1_0028.jpg",
+      "EO_SU_DT_W6_H7_E1D1_0025.jpg",
+      "EO_SU_DT_W6_H7_E1D1_0027.jpg",
+      "EO_SU_DT_W6_H7_E1D1_0028.jpg",
+      "EO_SU_DT_W6_H7_E1D1_0025.jpg",
+      "EO_SU_DT_W6_H7_E1D1_0027.jpg"
+    ],
+    "gt_level": "YELLOW",
+    "pred_level": "YELLOW",
+    "correct": true
+  },
+  {
+    "images": [
+      "IR_SU_NT_W5_H1_A4D4E2_0001.jpg",
+      "IR_SU_NT_W5_H1_A4D4E2_0002.jpg",
+      "IR_SU_NT_W5_H1_A4D4E2_0003.jpg",
+      "IR_SU_NT_W5_H1_A4D4E2_0004.jpg",
+      "IR_SU_NT_W5_H1_A4D4E2_0001.jpg",
+      "IR_SU_NT_W5_H1_A4D4E2_0002.jpg",
+      "IR_SU_NT_W5_H1_A4D4E2_0003.jpg",
+      "IR_SU_NT_W5_H1_A4D4E2_0004.jpg"
+    ],
+    "gt_level": "GREEN",
+    "pred_level": "GREEN",
+    "correct": true
+  }
+]

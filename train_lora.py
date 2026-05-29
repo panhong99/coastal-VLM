@@ -19,8 +19,8 @@ import warnings
 warnings.filterwarnings("ignore", category=UserWarning, module="transformers")
 
 MODEL_PATH  = "/home/hail/pan/VLM-project/models/Qwen2.5-VL-7B-Instruct"
-DATA_PATH   = "/home/hail/pan/VLM-project/finetune_data_merged.json"
-OUTPUT_PATH = "/home/hail/pan/VLM-project/checkpoints/lora"
+DATA_PATH   = "/home/hail/pan/VLM-project/finetune_data_multiframe.json"   # 멀티프레임 데이터
+OUTPUT_PATH = "/home/hail/pan/VLM-project/checkpoints/lora_multiframe"
 
 REAL_IMG_DIRS = [
     "/home/hail/pan/VLM-project/dataset/open_data/data/Training/images/I1_images",
@@ -131,7 +131,11 @@ class CoastDataset(Dataset):
             data = json.load(f)
         if max_samples:
             data = data[:max_samples]
-        self.data = [d for d in data if d['image'] in image_map]
+        # 멀티프레임: 'images' 키(리스트)로 모든 프레임이 image_map에 있어야 함
+        self.data = [
+            d for d in data
+            if all(img in image_map for img in d['images'])
+        ]
         self.image_map = image_map
         print(f"유효 데이터: {len(self.data)}개")
 
@@ -140,20 +144,22 @@ class CoastDataset(Dataset):
 
     def __getitem__(self, idx):
         item = self.data[idx]
-        img_path = self.image_map[item['image']]
+
+        # 8프레임 이미지 content 구성 (추론의 vlm_analyze와 동일한 포맷)
+        image_content = [
+            {
+                "type":           "image",
+                "image":          self.image_map[img_name],
+                "resized_height": 224,
+                "resized_width":  224,
+            }
+            for img_name in item['images']
+        ]
 
         messages = [
             {
                 "role": "user",
-                "content": [
-                    {
-                        "type": "image",
-                        "image": img_path,
-                        "resized_height": 224,
-                        "resized_width":  224,
-                    },
-                    {"type": "text", "text": item['input']}
-                ]
+                "content": image_content + [{"type": "text", "text": item['input']}]
             },
             {
                 "role": "assistant",
@@ -223,8 +229,8 @@ lora_config = LoraConfig(
 model = get_peft_model(model, lora_config)
 model.print_trainable_parameters()
 
-# 데이터셋
-dataset    = CoastDataset(DATA_PATH, IMAGE_MAP)
+# 데이터셋 (6000개로 제한 → 약 6시간)
+dataset    = CoastDataset(DATA_PATH, IMAGE_MAP, max_samples=6000)
 val_size   = int(len(dataset) * 0.1)
 train_size = len(dataset) - val_size
 train_dataset, val_dataset = torch.utils.data.random_split(
@@ -232,21 +238,22 @@ train_dataset, val_dataset = torch.utils.data.random_split(
 )
 
 wandb.init(
-    project="coastal-surveillance-vlm",  # 프로젝트명
-    name="qwen2.5-vl-7b-lora-v1",        # 실험 이름
+    project="coastal-surveillance-vlm",
+    name="qwen2.5-vl-7b-lora-multiframe-v2",   # 멀티프레임 실험
     config={
-        "model":        "Qwen2.5-VL-7B-Instruct",
-        "lora_r":       8,
-        "lora_alpha":   16,
-        "batch_size":   1,
-        "grad_accum":   8,
-        "lr":           2e-4,
-        "epochs":       3,
+        "model":         "Qwen2.5-VL-7B-Instruct",
+        "lora_r":        8,
+        "lora_alpha":    16,
+        "batch_size":    1,
+        "grad_accum":    8,
+        "lr":            2e-4,
+        "epochs":        3,
         "train_samples": len(train_dataset),
         "val_samples":   len(val_dataset),
-        "image_size":   "224x224",
-        "zero_stage":   2,
-        "dataset":      "real+synthetic 60000쌍",
+        "image_size":    "224x224",
+        "num_frames":    8,              # 멀티프레임
+        "zero_stage":    2,
+        "dataset":       "real+synthetic 멀티프레임(8장)",
     }
 )
 

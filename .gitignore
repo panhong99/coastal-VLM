@@ -14,3 +14,9 @@
 /dataset.zip
 /.env.example
 /Dockerfile
+/VLM-project.zip
+/checkpoints.zip
+/chroma_db.zip
+/models.zip
+/eval_multiframe.log
+/train_multiframe.log

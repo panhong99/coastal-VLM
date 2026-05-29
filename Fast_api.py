@@ -21,7 +21,7 @@ from langchain_community.embeddings import HuggingFaceEmbeddings
 
 # ── Path configuration ─────────────────────────────────────────────────────────
 BASE_MODEL_PATH = os.environ.get("BASE_MODEL_PATH", "/app/models/Qwen2.5-VL-7B-Instruct")
-LORA_MODEL_PATH = os.environ.get("LORA_MODEL_PATH", "/app/checkpoints/lora/final")
+LORA_MODEL_PATH = os.environ.get("LORA_MODEL_PATH", "/app/checkpoints/lora_multiframe/final")
 CHROMA_PATH     = os.environ.get("CHROMA_PATH",     "/app/chroma_db")
 
 # Anomaly detection threshold (0~255 scale, mean pixel difference between frames)
